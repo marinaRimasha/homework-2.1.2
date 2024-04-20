@@ -8,9 +8,9 @@ let studentName = "Vasya";
 let studentSurname = "Pupkin";
 let fullName = studentName + " " + studentSurname;
 
-// Rounded the average score to one after decimal
+// using slice(0,1) to select fist letter of the name
 console.log(
-  `The average score for ${fullName} is ${averageScore.toFixed(1)}.`
+  `The average score for ${studentName.slice(0, 1)}. ${studentSurname} is ${averageScore.toFixed(1)}.`
 );
 
 // We could also use student as an object
@@ -27,8 +27,8 @@ let fullStudentName = student.studentName + " " + student.studentSurname;
 
 // Rounded the average score to one after decimal
 let averageStudentScore = (
-  (student.gitScore + student.introScore + student.jsScore) / 3).toFixed(1);
-
+  (student.gitScore + student.introScore + student.jsScore) /3).toFixed(1);
+// using slice(0,1) to select fist letter of the name
 console.log(
-  `The average score for student ${fullStudentName} is ${averageStudentScore}.`
+  `The average score for student ${student.studentName.slice(0, 1)}. ${student.studentSurname} is ${averageStudentScore}.`
 );
